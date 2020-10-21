@@ -34,7 +34,7 @@ If the above doesn't work, you probably need to install some
 prerequirements. For example, on a fresh Debian Stretch system:
 
 ```
-$ sudo apt-get install make gcc g++
+$ sudo apt-get install make gcc g++ libboost-dev
 ```
 
 It is worth getting the latest cmake, so you may want to install that the hard way:

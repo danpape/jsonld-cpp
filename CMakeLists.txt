@@ -1,16 +1,10 @@
 cmake_minimum_required(VERSION 3.14)
 
-project(libjsonld-cpp VERSION 1.0.0
-                 DESCRIPTION "Digital Contract Design's C++ implementation of JSON-LD"
-                 LANGUAGES C CXX )
-
-set(CMAKE_CXX_STANDARD 11)
-
-if(CMAKE_CXX_COMPILER_ID MATCHES GNU)
-  set(DCD_CXX_FLAGS -Wall -Wextra -Wpedantic -Wno-unknown-pragmas)
-elseif(CMAKE_CXX_COMPILER_ID MATCHES Clang)
-  set(DCD_CXX_FLAGS -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded -Wno-missing-prototypes)
-endif()
+project(
+    libjsonld-cpp
+    VERSION 1.0.0
+    DESCRIPTION "Digital Contract Design's C++ implementation of JSON-LD"
+    LANGUAGES C CXX )
 
 find_package(Boost 1.70 REQUIRED COMPONENTS  filesystem)
 

@@ -3,6 +3,7 @@
 #include <cstdint>
 #include <array>
 #include <limits>
+#include <iostream>
 
 namespace rc {
 

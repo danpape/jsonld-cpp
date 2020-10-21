@@ -1,0 +1,41 @@
+{
+    "version": 1,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 14,
+        "patch":0
+    },
+    "configurePresets": [
+        {
+            "name": "default",
+            "displayName": "Default",
+            "description": "Default build using Ninja and clang",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_CXX_FLAGS": "${COMPILER_SPECIFIC_FLAGS}",
+                "CMAKE_CXX_STANDARD": "11",
+                "CMAKE_CXX_STANDARD_REQUIRED": "YES",
+                "CMAKE_CXX_EXTENSIONS": "OFF"
+            },
+            "environment": {
+                "COMPILER_SPECIFIC_FLAGS": "-Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded -Wno-missing-prototypes"
+            }
+        },
+        {
+            "name": "gnu",
+            "inherits": "default",
+            "displayName": "GNU Only configuration",
+            "description": "Default build using GNU compiler",
+            "environment": "-Wall -Wextra -Wpedantic -Wno-unknown-pragmas",
+            "condition": {
+                "type": "equals",
+                "lhs": CMAKE_CXX_COMPILER_ID,
+                "rhs": "GNU"
+            }
+        }
+    ],
+    "buildPresets": [],
+    "testPresets": [],
+    "vendor": {}
+}
