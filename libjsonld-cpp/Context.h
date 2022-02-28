@@ -44,9 +44,7 @@ private:
             std::string baseURL = "",
             bool isProtected = false,
             bool overrideProtected = false,
-            std::vector<std::string> remoteContexts = std::vector<std::string>(),
-            bool validateScopedContext = true
-            );
+            std::vector<std::string> remoteContexts = std::vector<std::string>());
 
     void init();
 

@@ -8,6 +8,7 @@ CommandRunner::CommandRunner(std::string command) : command{command}{}
 std::string CommandRunner::run()
 {
     FILE* pipe;
+    output.str("");
     // clear any error states on the stringstream
     output.clear();
     // set the stringstream position to the beginning

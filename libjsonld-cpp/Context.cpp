@@ -764,8 +764,7 @@ void Context::createTermDefinition(
         std::string baseURL,
         bool isProtected,
         bool overrideProtected,
-        std::vector<std::string> remoteContexts,
-        bool validateScopedContext) {
+        std::vector<std::string> remoteContexts) {
 
     // Comments in this function are labelled with numbers that correspond to sections
     // from the description of the create term definition algorithm.

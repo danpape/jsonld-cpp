@@ -106,6 +106,7 @@ bool TestRunner::next_executable()
 
     if ( executable_iterator < executables.size() )
     {
+        ss.str("");
         // clear any error states on the stringstream
         ss.clear();
         // set the stringstream position to the beginning
