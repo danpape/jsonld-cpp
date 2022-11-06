@@ -6,8 +6,23 @@
 #include "jsonld-cpp/DoubleFormatter.h"
 #include "jsonld-cpp/BlankNodeNames.h"
 #include "jsonld-cpp/JsonLdError.h"
+#include "RDFRegex.h"
+#include <regex>
 
 using nlohmann::json;
+
+namespace {
+    std::vector<std::string> splitLines(std::string &input) {
+        std::vector<std::string> lines;
+        std::regex rgx(RDFRegex::EOLN);
+        std::sregex_token_iterator i(input.begin(), input.end(), rgx,-1);
+        std::sregex_token_iterator end;
+
+        for ( ; i != end; ++i)
+            lines.push_back(*i);
+        return lines;
+    }
+}
 
 namespace RDF {
 

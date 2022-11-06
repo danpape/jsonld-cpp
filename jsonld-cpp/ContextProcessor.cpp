@@ -1068,6 +1068,7 @@ namespace {
                 // context using the LoadDocumentCallback, passing context for url, and
                 // http://www.w3.org/ns/json-ld#context for profile and for requestProfile.
 
+                // todo, fix indentation here...
                 // 5.2.5.1)
                 // If context cannot be dereferenced, or the document from context document cannot
                 // be transformed into the internal representation , a loading remote context
