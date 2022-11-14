@@ -44,7 +44,7 @@ namespace RDF {
 
     void RDFDataset::addTripleToGraph(const std::string & graphName, const RDFTriple& triple) {
         if(!storedGraphs.count(graphName) ||
-           std::find(storedGraphs[graphName].begin(), storedGraphs[graphName].end(), triple) == storedGraphs[graphName].end())
+           std::find(storedGraphs[graphName].cbegin(), storedGraphs[graphName].cend(), triple) == storedGraphs[graphName].cend())
             storedGraphs[graphName].push_back(triple);
     }
 

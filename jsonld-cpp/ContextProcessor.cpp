@@ -1040,7 +1040,7 @@ namespace {
                 // If validate scoped context is false, and remote contexts already includes
                 // context do not process context further and continue to any next context in local context.
                 if (!validateScopedContext &&
-                    std::find(remoteContexts.begin(), remoteContexts.end(), contextUri) != remoteContexts.end()) {
+                    std::find(remoteContexts.cbegin(), remoteContexts.cend(), contextUri) != remoteContexts.cend()) {
                     continue;
                 }
 
